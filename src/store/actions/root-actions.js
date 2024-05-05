@@ -1,4 +1,4 @@
-import { setJobs } from "./job-action";
+import { setJobs, setJobsFetchingStatus } from "./job-action";
 import { setFilters } from "./filter-action";
 
-export { setJobs, setFilters };
+export { setJobs, setFilters, setJobsFetchingStatus };

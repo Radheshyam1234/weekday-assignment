@@ -3,7 +3,7 @@ import jobsReducer from "./job-reducer";
 import filtersReducer from "./filter-reducer";
 
 const rootReducer = combineReducers({
-  jobsReducer,
-  filtersReducer,
+  jobs: jobsReducer,
+  filters: filtersReducer,
 });
 export default rootReducer;

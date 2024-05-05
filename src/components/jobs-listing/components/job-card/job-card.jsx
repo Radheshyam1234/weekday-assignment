@@ -1,24 +1,33 @@
 import "./job-card.css";
 
-const JobCard = () => {
+const JobCard = ({ data }) => {
+  console.log(data);
   return (
     <div className="card-wrapper">
       <div className="card-info_container">
         <div className="card-info_company-and-role-wrapper">
           <img
-            src={"https://logo.clearbit.com/intel.com"}
+            src={data.logoUrl}
             alt="comapny-name.png"
             className="company-logo"
           />
           <div>
-            <p className="card-info_company-name">FlexWash Technologies</p>
-            <p className="card-info_role-name">Senior Engineer</p>
-            <p className="card-info_job-location">Banglore</p>
+            <p className="card-info_company-name">{data.companyName}</p>
+            <p className="card-info_role-name">{data.jobRole}</p>
+            <p className="card-info_job-location">{data.location}</p>
           </div>
         </div>
-        <div className="card-info_salary-detail">
-          <p>Estimated Salary: ₹30 - 60 LPA ✅</p>
-        </div>
+        {(data.minJdSalary || data.maxJdSalary) && (
+          <div className="card-info_salary-detail">
+            <p>
+              Estimated Salary: ₹{data.minJdSalary ? data.minJdSalary : ""}
+              {data.minJdSalary && data.maxJdSalary ? " - " : ""}
+              {data.maxJdSalary ? data.maxJdSalary : ""} LPA ✅
+              {/* ₹30 - 60 LPA */}
+            </p>
+          </div>
+        )}
+
         <div className="">
           <p className="card-info_about-company">About Company</p>
           <div className="card-info_about-us">
@@ -47,8 +56,14 @@ const JobCard = () => {
           </div>
         </div>
         <div className="experience-details-container">
-          <p className="experience-details_headingText">Minimum Experience</p>
-          <p className="experience-details_subText">3 Years</p>
+          {data.minExp && (
+            <>
+              <p className="experience-details_headingText">
+                Minimum Experience
+              </p>
+              <p className="experience-details_subText">3 Years</p>
+            </>
+          )}
         </div>
       </div>
       <div className="easy-apply-button_container">

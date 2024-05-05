@@ -1,17 +1,14 @@
+import { useSelector } from "react-redux";
 import JobCard from "./components/job-card/job-card";
 import "./jobs-listing.css";
 
 const JobsListing = () => {
+  const { jobs } = useSelector((state) => state.jobs);
   return (
     <div className="jobs-container">
-      <JobCard />
-      <JobCard />
-      <JobCard />
-      <JobCard />
-      <JobCard />
-      <JobCard />
-      <JobCard />
-      <JobCard />
+      {jobs?.map((data) => (
+        <JobCard data={data} />
+      ))}
     </div>
   );
 };
