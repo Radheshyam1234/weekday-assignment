@@ -1,0 +1,9 @@
+.search-filter-input {
+  border-radius: 4px;
+  height: 38px;
+  width: 176px;
+  line-height: 23px;
+  outline: none;
+  border: 0.8px solid rgb(204, 204, 204);
+  padding: 5px 8px 5px 8px;
+}

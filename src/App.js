@@ -1,13 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { fetchJobs } from "./store/api/fetchJobs";
 import { useEffect } from "react";
+import Filters from "./components/filters/filters";
 
 function App() {
   useEffect(() => {
-    fetchJobs().then((data) => console.log("jobs", data));
+    fetchJobs(30).then((data) => console.log("jobs", data));
   }, []);
-  return <div className="App">Weekday Assignment</div>;
+  return (
+    <div className="App">
+      <Filters />
+    </div>
+  );
 }
 
 export default App;

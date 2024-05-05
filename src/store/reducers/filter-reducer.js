@@ -1,5 +1,5 @@
 const filtersInitialState = {
-  role: "",
+  role: [],
   experience: "",
   techStack: [],
   numOfEmployees: "",
