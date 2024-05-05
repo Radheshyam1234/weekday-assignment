@@ -16,11 +16,15 @@ const JobsListing = () => {
         {filteredJobs?.length > 0 ? (
           filteredJobs?.map((data) => <JobCard data={data} />)
         ) : (
-          <div className="no-jobs-container">
-            <p className="no-jobs-container_text">
-              No Jobs available for this category at the moment
-            </p>
-          </div>
+          <>
+            {fetchingStatus === "idle" && (
+              <div className="no-jobs-container">
+                <p className="no-jobs-container_text">
+                  No Jobs available for this category at the moment
+                </p>
+              </div>
+            )}
+          </>
         )}
       </div>
       {fetchingStatus === "fetching" ? (
