@@ -229,35 +229,31 @@ export const WorkLocationsConstants = [
 
 export const MinSalaryConstants = [
   {
-    label: "0L",
-    value: "0",
-  },
-  {
-    label: "10L",
+    label: "10K USD",
     value: "10",
   },
   {
-    label: "20L",
-    value: "10",
+    label: "20K USD",
+    value: "20",
   },
   {
-    label: "30L",
+    label: "30K USD",
     value: "30",
   },
   {
-    label: "40L",
+    label: "40K USD",
     value: "40",
   },
   {
-    label: "50L",
+    label: "50K USD",
     value: "50",
   },
   {
-    label: "60L",
+    label: "60K USD",
     value: "60",
   },
   {
-    label: "70L",
+    label: "70K USD",
     value: "70",
   },
 ];

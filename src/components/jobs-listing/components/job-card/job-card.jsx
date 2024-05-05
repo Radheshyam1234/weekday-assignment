@@ -1,7 +1,6 @@
 import "./job-card.css";
 
 const JobCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="card-wrapper">
       <div className="card-info_container">
@@ -20,10 +19,11 @@ const JobCard = ({ data }) => {
         {(data.minJdSalary || data.maxJdSalary) && (
           <div className="card-info_salary-detail">
             <p>
-              Estimated Salary: ₹{data.minJdSalary ? data.minJdSalary : ""}
+              Estimated Salary:
+              {data.minJdSalary ? ` ${data.minJdSalary}K` : ""}
               {data.minJdSalary && data.maxJdSalary ? " - " : ""}
-              {data.maxJdSalary ? data.maxJdSalary : ""} LPA ✅
-              {/* ₹30 - 60 LPA */}
+              {data.maxJdSalary ? ` ${data.maxJdSalary}K` : ""}{" "}
+              {data?.salaryCurrencyCode} ✅
             </p>
           </div>
         )}
@@ -34,22 +34,7 @@ const JobCard = ({ data }) => {
             <p>
               <strong>About Us</strong>
             </p>
-            <p className="">
-              Flex Wash is an operating system for the car wash industry. Our
-              solutions help owners manage their operations and grow revenue.{" "}
-            </p>
-            <p className="">
-              Flex Wash is an operating system for the car wash industry. Our
-              solutions help owners manage their operations and grow revenue.{" "}
-            </p>
-            <p className="">
-              Flex Wash is an operating system for the car wash industry. Our
-              solutions help owners manage their operations and grow revenue.{" "}
-            </p>
-            <p className="">
-              Flex Wash is an operating system for the car wash industry. Our
-              solutions help owners manage their operations and grow revenue.{" "}
-            </p>
+            <p className="">{data.jobDetailsFromCompany}</p>
           </div>
           <div className="view-job-button-container">
             <div className="view-job-btn">View Job</div>
@@ -61,7 +46,7 @@ const JobCard = ({ data }) => {
               <p className="experience-details_headingText">
                 Minimum Experience
               </p>
-              <p className="experience-details_subText">3 Years</p>
+              <p className="experience-details_subText">{data.minExp} Years</p>
             </>
           )}
         </div>

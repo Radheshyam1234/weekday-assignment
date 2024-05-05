@@ -1,10 +1,11 @@
 const filtersInitialState = {
   role: [],
-  experience: "",
+  experience: 0,
   techStack: [],
   numOfEmployees: "",
   location: "",
   minSalary: 0,
+  searchCompanyText: "",
 };
 
 const filtersReducer = (state = filtersInitialState, action) => {

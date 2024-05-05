@@ -5,3 +5,19 @@
   flex-wrap: wrap;
   gap: 24px;
 }
+.loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.no-jobs-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.no-jobs-container {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(47, 46, 46);
+}
