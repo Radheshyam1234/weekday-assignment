@@ -1,0 +1,94 @@
+.card-wrapper {
+  padding: 5px;
+  border-radius: 20px;
+  max-width: 360px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
+}
+.card-info_container {
+  padding: 8px 16px 8px 16px;
+}
+.card-info_company-and-role-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.company-logo {
+  height: 40px;
+  width: 25px;
+}
+.card-info_company-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  color: #8b8b8b;
+}
+.card-info_role-name {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-info_job-location {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.card-info_salary-detail {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 8px 0;
+  color: rgb(77, 89, 106);
+  line-height: 1.43;
+}
+.card-info_about-company {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.card-info_about-us {
+  font-size: 14px;
+  height: 250px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+}
+.view-job-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.view-job-btn {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+  top: -20px;
+  color: #4943da;
+  cursor: pointer;
+}
+.experience-details_headingText {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  color: #8b8b8b;
+}
+.experience-details_subText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
+.easy-apply-button_container {
+  padding: 5px 15px;
+}
+.easy-apply-button {
+  width: 100%;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background-color: rgb(85, 239, 196);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}

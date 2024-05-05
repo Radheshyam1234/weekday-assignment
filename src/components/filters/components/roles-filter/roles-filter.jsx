@@ -8,7 +8,7 @@ const RolesFilter = () => {
   return (
     <div>
       <Select
-        placeholder="Roles"
+        placeholder="Select Roles"
         isMulti={true}
         options={RolesConstants}
         onChange={handleRoleChange}

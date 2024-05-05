@@ -168,7 +168,6 @@ export const RolesConstants = [
     value: "Finance",
   },
 ];
-export const NumberOfEmployees = [{ label: "", value: "" }];
 
 export const ExperienceConstants = [
   {
